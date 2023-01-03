@@ -1,0 +1,48 @@
+#start {
+    text-align: center;
+  }
+  
+  #timer {
+    float: right;
+  }
+  
+  #choices button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  #choices button:hover {
+    background-color: #444;
+  }
+  
+  #end {
+    text-align: center;
+  }
+  
+  form {
+    display: inline-block;
+    text-align: center;
+  }
+  
+  #save-score {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  #save-score:hover {
+    background-color: #444;
+  }
