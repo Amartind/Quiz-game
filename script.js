@@ -6,15 +6,34 @@ var highScores = [];
 
 // Array of quiz questions and answers
 const questions = [  {    question: "Who can 3d Print?",    
-choices: ["Smarties","Only the technically inclined","Anyone!"],
+choices: ["Smarties","Only the technically inclined","Anyone!","People in 3D printing design class"],
     answer: 2
   },
-  {
-    question: "Inside which HTML element do we put the JavaScript?",
-    choices: ["scripting","javascript","script","js"],
+  {    question: "How much do you have to spend to get a 3d printer?",    
+choices: ["$1000","$100","$5000","$50"],
+    answer: 3
+  },
+  {    question: "What can be 3D printed?",    
+choices: ["Metal parts","Glass","Human Organs","All of the above"],
+    answer: 3
+  },
+  {    question: "What is the most common 3D printing type?",    
+choices: ["Stereolithography (SLA)","Selective Laser Sintering (SLS)","Fused Deposition Modeling (FDM)","Digital Light Processing (DLP)"],
     answer: 2
   },
-  // Add more questions here...
+  {    question: "When was 3D Printing first done?",    
+choices: ["1981","2011","1964","1995"],
+    answer: 0
+  },
+  {    question: "When was 3D Printing first done?",    
+choices: ["1981","2011","1964","1995"],
+    answer: 0
+  },
+  {    question: "When was 3D Printing first done?",    
+choices: ["1981","2011","1964","1995"],
+    answer: 0
+  },
+  
 ];
 
 // Start quiz when start button is clicked
@@ -47,13 +66,13 @@ function showQuestion() {
     // Clear previous question's choices
     document.getElementById('choices').innerHTML = '';
   
-    let question = questions[currentQuestion].question;
-    let choices = questions[currentQuestion].choices;
+    var question = questions[currentQuestion].question;
+    var choices = questions[currentQuestion].choices;
   
     document.getElementById('question').innerHTML = question;
   
-    for (let i = 0; i < choices.length; i++) {
-      let choice = document.createElement('button');
+    for (var i = 0; i < choices.length; i++) {
+      var choice = document.createElement('button');
       choice.innerHTML = choices[i];
       choice.setAttribute('value', i);
       choice.addEventListener('click', checkAnswer);
@@ -62,8 +81,8 @@ function showQuestion() {
   }
 
 function checkAnswer(event) {
-    let selectedChoice = event.target.value;
-    let correctAnswer = questions[currentQuestion].answer;
+    var selectedChoice = event.target.value;
+    var correctAnswer = questions[currentQuestion].answer;
   
     if (selectedChoice == correctAnswer) {
       score++;
@@ -72,8 +91,8 @@ function checkAnswer(event) {
     }
   
     // Remove event listeners from previous question's choices
-    let choices = document.getElementById('choices').children;
-    for (let i = 0; i < choices.length; i++) {
+    var choices = document.getElementById('choices').children;
+    for (var i = 0; i < choices.length; i++) {
       choices[i].removeEventListener('click', checkAnswer);
     }
   
@@ -100,4 +119,6 @@ function endQuiz() {
 document.getElementById('save-score').addEventListener('click', saveScore);
 
 function saveScore() {
-  let initials = document}
+  
+
+}
