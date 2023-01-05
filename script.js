@@ -118,7 +118,16 @@ function endQuiz() {
 
 document.getElementById('save-score').addEventListener('click', saveScore);
 
+
+
+
 function saveScore() {
-  
+  var finalScore = document.getElementById("final-score").innerHTML;
+  var initialsFS = document.getElementById("userInitials");
+  var initialsValue = initialsFS.value
+  // console.log(finalScore);
+  // console.log(initialsValue);
+  localStorage.setItem('userInitials', initialsFS.value);
+  localStorage.setItem('finalScore', finalScore);
 
 }
