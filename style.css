@@ -2,11 +2,11 @@
     text-align: center;
   }
   
-  #timer {
+#timer {
     float: right;
   }
   
-  #choices button {
+#choices button {
     display: block;
     width: 100%;
     padding: 10px;
@@ -18,20 +18,20 @@
     cursor: pointer;
   }
   
-  #choices button:hover {
+#choices button:hover {
     background-color: #444;
   }
   
-  #end {
+#end {
     text-align: center;
   }
   
-  form {
+form {
     display: inline-block;
     text-align: center;
   }
   
-  #save-score {
+#save-score {
     display: block;
     width: 100%;
     padding: 10px;
@@ -43,6 +43,10 @@
     cursor: pointer;
   }
   
-  #save-score:hover {
+#save-score:hover {
     background-color: #444;
   }
+
+#scores {
+  list-style-type: none;
+}  
