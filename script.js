@@ -119,9 +119,13 @@ function endQuiz() {
 document.getElementById('save-score').addEventListener('click', saveScore);
 
 
-
+// var scores = [] ;
+// var highScoreList = document.querySelector(".scores");
 
 function saveScore() {
+  scores.innerHTML = "";
+
+ 
   var finalScore = document.getElementById("final-score").innerHTML;
   var initialsFS = document.getElementById("userInitials");
   var initialsValue = initialsFS.value
@@ -129,5 +133,12 @@ function saveScore() {
   // console.log(initialsValue);
   localStorage.setItem('userInitials', initialsFS.value);
   localStorage.setItem('finalScore', finalScore);
-
+  
+  var highScoreUser = localStorage.getItem('userInitials') + " " + localStorage.getItem('finalScore');
+  
+  // console.log(highScoreUser)
+  listScores = highScoreUser
+  var listScores = document.createElement("li")
+  document.getElementById('scores').appendChild(listScores);
+  
 }
