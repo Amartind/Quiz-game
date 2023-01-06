@@ -25,14 +25,19 @@ choices: ["Stereolithography (SLA)","Selective Laser Sintering (SLS)","Fused Dep
 choices: ["1981","2011","1964","1995"],
     answer: 0
   },
-  {    question: "When was 3D Printing first done?",    
-choices: ["1981","2011","1964","1995"],
+  {    question: "What % of jewellery is made using 3d printing?",    
+choices: ["30%","90%","20%","50%"],
+    answer: 1
+  },
+  {    question: "Can you only print rigid things?",    
+choices: ["False","True"],
     answer: 0
   },
-  {    question: "When was 3D Printing first done?",    
-choices: ["1981","2011","1964","1995"],
-    answer: 0
-  },
+  {    question: "Whats the print size limitations?",    
+  choices: ["1ft x 1ft x 2ft","200cm x 200cm x 150cm","400cm x 400cm x 400cm"
+,"As big as your printer will allow you to print"],
+      answer: 3
+    },
   
 ];
 
@@ -119,15 +124,16 @@ function endQuiz() {
 document.getElementById('save-score').addEventListener('click', saveScore);
 
 
-// 
+
 function saveScore() {
   //sets interhtml of scores to blank
   scores.innerHTML = "";
 
- 
+  //Grabs the values of the Initials and Score
   var finalScore = document.getElementById("final-score").innerHTML;
   var initialsFS = document.getElementById("userInitials");
-  var initialsValue = initialsFS.value;
+  
+  //Set and retrieve from local storage
   localStorage.setItem('userInitials', initialsFS.value);
   localStorage.setItem('finalScore', finalScore);
   
